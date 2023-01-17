@@ -15,7 +15,7 @@ echo "mrx13 ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 usermod -aG sudo mrx13
 
 # set the password for the new user
-echo "mrx13:password" | chpasswd 
+echo "mrx13:SuperStrongRandom123***Password!232" | chpasswd 
 
 # create a new ssh key for the new user
 su - mrx13 -c "ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N ''"
@@ -35,5 +35,3 @@ chmod +w /etc/shadow
 
 # make /etc/passwd writable
 chmod +w /etc/passwd
-
-
